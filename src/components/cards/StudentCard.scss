@@ -1,0 +1,12 @@
+@import '../../styles/colors.scss';
+
+.student{
+    .status{
+        &.on{
+            background-color: $successColorDark !important;
+        }
+        &.off{
+            background-color: $errorColorDark !important;
+        }
+    }
+}

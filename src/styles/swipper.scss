@@ -1,0 +1,90 @@
+@import 'colors';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$nopeyepButtonHeight: 10vh;
+$timeTransitionBg: 100ms;
+
+#swipperContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:absolute; 
+    height:100%; 
+    width:100%;
+    -webkit-transition: background-color $timeTransitionBg linear;
+    -ms-transition: background-color $timeTransitionBg linear;
+    transition: background-color $timeTransitionBg linear;
+
+    #swipperPanel{
+        margin-bottom: $nopeyepButtonHeight;
+
+        h1{
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            color: $primaryColor;
+            line-height: 12vh;
+            font-size: 10vh;
+        }
+    }
+
+    #nopeyepButton {
+        position: absolute;
+        width: 100%;
+        height: $nopeyepButtonHeight;
+        bottom: 0;
+        text-align: center;
+
+        span{
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
+            line-height: 10vh;
+            font-size: 3vh;
+        }
+
+
+        .nopeyepButton{
+            cursor: pointer;
+
+            &.nope{
+                position: absolute;
+                width: 50%;
+                height: inherit;
+                left: 0;
+                background-color: $errorColor;
+            }
+
+            &.yep{
+                position: absolute;
+                width: 50%;
+                height: inherit;
+                right: 0;
+                background-color:$successColor;
+            }
+
+        }
+
+    }
+    &.bgNope{
+        background-color: $errorColor;
+        -webkit-transition: background-color $timeTransitionBg linear;
+        -ms-transition: background-color $timeTransitionBg linear;
+        transition: background-color $timeTransitionBg linear;
+
+        h1{
+            color: #ffffff !important;
+        }
+    }
+
+    &.bgYep{
+        background-color: $successColor;
+        -webkit-transition: background-color $timeTransitionBg linear;
+        -ms-transition: background-color $timeTransitionBg linear;
+        transition: background-color $timeTransitionBg linear;
+
+
+        h1{
+            color: #ffffff !important;
+        }
+    }
+}
