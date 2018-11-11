@@ -1,24 +1,38 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Card, Image } from 'semantic-ui-react'
+
+import { humanize } from 'utils/date'
+
 import './StudentCard.scss'
 
-const StudentCard = ({ name, status = false, image = '' }) => (
-  <Card className={'student'}>
-    <Image src='https://react.semantic-ui.com/images/avatar/large/daniel.jpg' />
+const StudentCard = ({ name, urlImage, status = false, date = null }) => (
+  <Card fluid className={'student'}>
     <Card.Content>
-      <Card.Header>Daniel</Card.Header>
-      <Card.Meta>Joined in 2016</Card.Meta>
-      <Card.Description>Daniel is a comedian living in Nashville.</Card.Description>
+      {!!urlImage && <Image floated='right' size='mini' src={urlImage} />}
+      <Card.Header>{name}</Card.Header>
+      {!!date && <Card.Meta>{humanize(date)}</Card.Meta>}
     </Card.Content>
     {status ? <Card.Content extra className={'status on'} /> : <Card.Content extra className={'status off'} />}
   </Card>
 )
 
+//const StudentCard = ({ name, status = false, urlImage = '', date = null }) => (
+//  <Card className={'student'}>
+//    <Image src={urlImage} />
+//    <Card.Content>
+//      <Card.Header>{name}</Card.Header>
+//      {!!date && <Card.Meta>{humanize(date)}</Card.Meta>}
+//    </Card.Content>
+//    {status ? <Card.Content extra className={'status on'} /> : <Card.Content extra className={'status off'} />}
+//  </Card>
+//)
+
 StudentCard.propTypes = {
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   status: PropTypes.bool,
-  image: PropTypes.string,
+  urlImage: PropTypes.string,
+  date: PropTypes.object,
 }
 
 

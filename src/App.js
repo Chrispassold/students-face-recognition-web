@@ -5,7 +5,7 @@ import { Container } from 'semantic-ui-react'
 class App extends Component {
 
     render() {
-        return <Container style={{ paddingTop: '10em' }}>
+        return <Container style={{ paddingTop: '2em' }}>
         {this.props.children}
     </Container>
     }

@@ -32,6 +32,8 @@ module.exports = {
       '~': Path.resolve(__dirname, '../src'),
       'components': Path.resolve(__dirname, '../src/components'),
       'styles': Path.resolve(__dirname, '../src/styles'),
+      'models': Path.resolve(__dirname, '../src/models'),
+      'utils': Path.resolve(__dirname, '../src/utils'),
     }
   },
   module: {

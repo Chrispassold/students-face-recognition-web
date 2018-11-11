@@ -1,6 +1,8 @@
 @import '../../styles/colors.scss';
 
 .student{
+    width: 200px;
+
     .status{
         &.on{
             background-color: $successColorDark !important;

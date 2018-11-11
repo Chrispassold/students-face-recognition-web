@@ -2,11 +2,11 @@ import React, { Fragment } from 'react';
 import { IndexRoute, Route } from 'react-router';
 // COMPONENTS
 import App from '../App'
-import StudentsStatus from '../containers/students-status'
+import ClassRegister from '../containers/class-register'
 
 export default <Fragment>
     <Route path='/' component={App}>
-        <IndexRoute component={StudentsStatus} />
+        <IndexRoute component={ClassRegister} />
     </Route>
 
     {/* <Route path='signin' component={Signin}/>
