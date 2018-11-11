@@ -1,6 +1,4 @@
-# NopeYep
-
-Site de resposta a perguntas diretas
+# Students face recognition web
 
 
 ### Installation
