@@ -5,7 +5,7 @@ const HeaderWithImage = () => (
   <div>
     <Header as='h2' icon textAlign='center'>
       <Icon name='users' circular />
-      <Header.Content>Chamada de alunos</Header.Content>
+      <Header.Content>Lista de chamada</Header.Content>
     </Header>
   </div>
 )
